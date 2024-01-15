@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { connectToServer, getSocket } from './utils/socket-client';
+import { Link } from 'react-router-dom';
 
 const App: React.FC = () => {
   const [jwtToken, setJwtToken] = useState('');
@@ -64,6 +65,7 @@ const App: React.FC = () => {
 
       <h3>Messages</h3>
       <ul id="messages-ul"></ul>
+      <Link to="/view">IR A view</Link>
     </div>
   );
 };
